@@ -1,0 +1,303 @@
+body{
+    font-family: "anek bangla", poppins;
+    height: fit-content;
+}
+
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    padding: 15px 12%;
+    transition: all .50s ease;
+   
+}
+
+.logo {
+    margin-right: 3px;
+    width: 70px;
+}
+
+.logo-name{
+    font-size: xx-large;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    position: relative;
+    background: white;
+}
+
+.nav_list {
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 1.5rem;
+}
+
+.nav_action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav_link,
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+.btn-primary {
+    display: inline-flex;
+    color: white;
+    background: black;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.nav_toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.nav_toggle ion-icon {
+    font-size: 2.5rem;
+    color: #5902B5;
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0rem 0.2rem 0.5rem var(--shadow);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.5s ease-in;
+    
+}
+
+.dropdown-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+
+}
+
+.nav_list_menu:hover ion-icon {
+    transition: all 0.5s ease-in;
+    transform: rotate(180deg);
+}
+
+.nav_list_menu:hover .dropdown {
+    clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%);
+}
+
+.item-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    border-color: black;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 20px;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.item-img {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+}
+
+.item-list-info {
+    position: relative;
+    width: 100%;
+}
+
+.info-badge {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    background: rgb(119, 230, 104);
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: small;
+}
+
+@media (max-width:1280px) {
+    
+    
+    header {
+        height: 50px;
+
+    }
+
+
+    .logo {
+        margin-right: 3px;
+        width: 50px;
+    }
+
+    .logo-name{
+        font-size: 20px;
+    }
+    
+
+    .nav_toggle {
+        display: block;
+    }
+    .nav_menu {
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+        height: 100vh;
+        overflow-y: scroll;
+
+    }
+    .nav_menu.active {
+        display: block;
+
+    }
+    .nav_list {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    .nav_link {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown {
+        top: 0;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        box-shadow: none;
+        height: 0;
+        text-align: start;
+        transition: all 0.5s ease-in;
+       
+    }
+    
+    .nav_list_menu:hover .dropdown {
+        height: 100%;
+        transition: all 0.5s ease-in;
+    }
+}
+
+@media (max-width:365px) {
+
+    .btn,
+    .btn-primary {
+        padding: 0.4rem 1rem;
+    }
+}
+
+
+/*...........Slider....................*/
+.slider{
+    align-items: center;
+    justify-content: center;
+}
+
+.slider .slide-track{
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide{
+    height: 100px;
+    width: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-sec .title-font {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    /* Add other styles for smaller screens here,
+       like adjusting margins, grid layout, etc. */
+  }
+  
+
+/* Dark theme background -------------------------------------------------------------------*/  
+  .dark-mode {
+    background-color: #141414;  
+    color: #fff;
+
+
+p {
+    color: white;
+}
+
+h1{
+    color : white;
+}
+    
+h2 {
+    color : white;
+}
+
+header {
+    background-color: #141414;
+    
+}
+
+header a {
+    color : white;
+}
+
+.nav_link span {
+    color: white;
+}
+.container { 
+    background-color: #141414;
+
+  }
+
+  .dropdown{
+    background-color: #141414;
+  }
+
+  @media (max-width:1280px) {
+  .nav_menu{
+    background-color: #141414;
+  }
+
+  .dropdown{
+    background-color: #141414;
+  }
+}
+
+  }
+
+
+
+
+
+
+
+
